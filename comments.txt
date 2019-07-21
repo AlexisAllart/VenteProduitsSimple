@@ -1,0 +1,15 @@
+npm init
+
+npm install express body-parser sequelize sequelize-cli mysql2 bcrypt jsonwebtoken multer --save
+
+"node_modules/.bin/sequelize" init
+
+// création des entités :
+"node_modules/.bin/sequelize" model:create --name Role --attributes name:string
+"node_modules/.bin/sequelize" model:create --name User --attributes "name:string, age:integer, email:string, avatar:string, password:string"
+"node_modules/.bin/sequelize" model:create --name Produit --attributes "name:string, price:float, photo:string, desc:string"
+
+// construire les entités/liaisons (entities.txt)
+// modifier config.json
+// créer la db (ex: workbench)
+"node_modules/.bin/sequelize" db:migrate

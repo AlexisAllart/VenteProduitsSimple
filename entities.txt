@@ -1,0 +1,15 @@
+Role:       User:       Produit:
+name        name        name
+            age         price
+            email       photo
+            avatar      desc
+            password
+            role_id
+
+
+
+Role hasMany User
+
+User belongsTo Role
+
+role_id => migration User.js
